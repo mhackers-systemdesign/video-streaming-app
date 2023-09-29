@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Video Player</title>
+</head>
+<html>
+
+<body>
+    <video controls width="250">
+        <source src="{{ url_for('static', filename=mp4_file_path) }}" type="video/mp4" />
+    </video>
+
+    <video controls width="250" autoplay>
+        <source src="/get_video" type="video/mp4" />
+    </video>
+</body>
+
+</html>
