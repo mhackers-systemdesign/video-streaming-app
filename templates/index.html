@@ -6,13 +6,19 @@
 <html>
 
 <body>
-    <video controls width="250">
+    <!-- <video controls width="250">
         <source src="{{ url_for('static', filename=mp4_file_path) }}" type="video/mp4" />
+    </video> -->
+    <h1>Full Video</h1>
+    <video width="640" height="360" controls>
+        <source src="{{ url_for('video') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h1>Streamed Video</h1>
+    <video controls width="250" autoplay>
+        <source src="/get_video/eecs388lab5.mp4" type="video/mp4" />
     </video>
 
-    <video controls width="250" autoplay>
-        <source src="/get_video" type="video/mp4" />
-    </video>
 </body>
 
 </html>
